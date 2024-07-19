@@ -1,0 +1,7 @@
+sdl2 download:
+https://github.com/libsdl-org/SDL/releases
+下载****-vc的版本里面有dll lib,注意sdl2.lib和sdl2main.lib都需要，程序运行需要拷贝dll，
+注意sdl.h中define了main 具体使用发现main有问题时需要undefine main处理
+
+https://blog.csdn.net/qq_40369162/article/details/122641658
+GLAD OR GLEW OR NAIVE WAY（Here is naive way)

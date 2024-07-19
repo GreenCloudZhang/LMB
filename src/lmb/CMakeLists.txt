@@ -6,7 +6,7 @@ file(
 )
 
 add_library(
-    lmb SHARED 
+    lmb STATIC 
     ${LMB_SRC}
 )
 

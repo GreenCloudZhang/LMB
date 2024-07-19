@@ -22,11 +22,9 @@ using namespace LMB;
 #include "display.h"
 
 
-#define OBJ_FILE "scene2.1.obj"
-#define TEXTURE_ALBEDO "scene2.1_texture.png"
-#define TEXTURE_EMISSIVE "scene2.1_emissive.png"
-
-
+#define OBJ_FILE "C:/repo/LMB/LMB/resource/LM1.obj"
+#define TEXTURE_ALBEDO "C:/repo/LMB/LMB/resource/LM1_DIFFUSE.png"
+#define TEXTURE_EMISSIVE "C:/repo/LMB/LMB/resource/LM1_EMISSIVE.png"
 
 std::shared_ptr<Bitmap<vec4>> LoadBitmap(const char * filename)
 {
@@ -57,8 +55,8 @@ std::shared_ptr<Bitmap<vec4>> LoadBitmap(const char * filename)
 	return ret;
 }
 
-
-int main()
+#undef main
+int main(int argc, char *argv[])
 {
 	InitDisplay();
 
@@ -179,7 +177,7 @@ int main()
 	//Set the calculator blend mode default is BlendSet
 	calc->SetBlend(std::make_shared<CalcBlendAdd>());
 
-#if 0
+#if 1
 	//Create a directional light and add it to the calculator
 	Light dir_light(Light::EType::Directional);
 	dir_light.SetDir(glm::normalize(vec3(1,1,1)));
